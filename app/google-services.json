@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1004641267305",
+    "project_id": "paperchat-mon",
+    "storage_bucket": "paperchat-mon.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1004641267305:android:43d534405576fa165dbcf8",
+        "android_client_info": {
+          "package_name": "com.example.kotlin.paperchat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZQHEIa82ML4_3tuDC_Se_P43YjWrn8EU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1004641267305:android:8445ff5918393afd5dbcf8",
+        "android_client_info": {
+          "package_name": "com.example.kotlin.paperchaty"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZQHEIa82ML4_3tuDC_Se_P43YjWrn8EU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

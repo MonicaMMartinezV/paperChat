@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Fondo -->
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/blackhat_bg"
+        android:scaleType="centerCrop" />
+
+    <!-- Recuadro semitransparente -->
+    <View
+        android:id="@+id/transparent_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000" /> <!-- Negro con 50% de opacidad -->
+
+    <!-- Contenido de la interfaz con ConstraintLayout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+        <!-- Imagen del logo de la organización con fondo circular -->
+        <View
+            android:id="@+id/transparent_overlay2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#80000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="167dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/circular_image"
+        android:scaleType="centerCrop"
+        android:src="@drawable/blackhat_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+        <!-- Campo de usuario -->
+    <EditText
+        android:id="@+id/editText_username"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:inputType="text"
+        android:padding="14dp"
+        android:background="@drawable/rounded_edittext"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/dark_gray"
+        android:fontFamily="sans-serif"
+        app:layout_constraintTop_toBottomOf="@+id/logoImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="58dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        />
+
+    <!-- Campo de contraseña -->
+    <EditText
+        android:id="@+id/editText_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="14dp"
+        android:background="@drawable/rounded_edittext"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/dark_gray"
+        android:fontFamily="sans-serif"
+        app:layout_constraintTop_toBottomOf="@+id/editText_username"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp" />
+
+    <!-- Botón de inicio de sesión -->
+    <Button
+        android:id="@+id/button_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="LOG IN"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/dark_red"
+        android:elevation="8dp"
+        android:padding="16dp"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif"
+        app:layout_constraintTop_toBottomOf="@+id/editText_password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"/>
+
+        <Button
+            android:id="@+id/button_signup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginRight="30dp"
+            android:backgroundTint="@color/light_red"
+            android:elevation="8dp"
+            android:fontFamily="sans-serif"
+            android:padding="16dp"
+            android:text="SIGN UP"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText_password" />
+
+        <TextView
+            android:id="@+id/myTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="772dp"
+            android:fontFamily="@font/courier_new"
+            android:padding="18dp"
+            android:text="BLACK HAT"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.533"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/signOutTextV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="624dp"
+            android:clickable="true"
+            android:fontFamily="@font/courier_new"
+            android:padding="18dp"
+            android:text="Sign Out"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/myTextView2"
+            android:layout_width="183dp"
+            android:layout_height="86dp"
+            android:layout_marginTop="812dp"
+            android:fontFamily="@font/courier_new"
+            android:padding="16dp"
+            android:text="ORGANIZATION"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.591"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/myTextView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="240dp"
+            android:fontFamily="@font/courier_new"
+            android:padding="18dp"
+            android:text="-MonHat-"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout></FrameLayout>
